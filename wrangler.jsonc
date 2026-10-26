@@ -1,0 +1,11 @@
+// Cloudflare Workers static assets: serves the Vite build as a single-page app.
+// Build: npm run build-only · Deploy: npx wrangler deploy · Non-production branches: npx wrangler versions upload
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "sports-edgebook",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application",
+  },
+}

@@ -24,3 +24,14 @@ Migrations live in `supabase/migrations/`. Until migrations run from CI, apply a
 ```sh
 npm run lint:check && npm run format:check && npm run type-check && npm test && npm run build-only
 ```
+
+## Deploy
+
+Cloudflare Workers (static assets) builds from this repo on every push: `main` goes to production, other branches get a preview URL. Config is in `wrangler.jsonc`.
+
+| Setting | Value |
+| --- | --- |
+| Build command | `npm run build-only` |
+| Deploy command | `npx wrangler deploy` |
+| Non-production branch deploy command | `npx wrangler versions upload` |
+| Build variable | `NODE_VERSION` = `24` |
