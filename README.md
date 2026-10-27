@@ -13,6 +13,8 @@ npm ci
 npm run dev
 ```
 
+On iOS, open the site in Safari, tap Share, then Add to Home Screen; on Android, open it in Chrome and choose Install app.
+
 `.env` points at the project's Supabase instance. Create `.env.local` (see `.env.example`) to use another one.
 
 ## Database
